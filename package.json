@@ -1,0 +1,8 @@
+{
+  "name": "product-safety-news-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}
