@@ -851,6 +851,12 @@
     "searchMethodologyVersion": "2.0.0",
     "searchClassifierVersion": "2.0.0",
     "queryGeneratorVersion": "2.0.0",
+    "liveNewsProviders": [
+      "Google News RSS",
+      "Bing News RSS",
+      "GDELT DOC 2.0"
+    ],
+    "liveSearchCacheMinutes": 15,
     "recallMetrics": {
       "qualifiedMatches": 1,
       "unmatchedRecalls": 51,
