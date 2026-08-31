@@ -1,9 +1,9 @@
 import taxonomy from '../../config/harm-taxonomy.json' with { type: 'json' };
 
 export const VERSIONS = Object.freeze({
-  methodologyVersion: '2.0.0',
-  classifierVersion: '2.0.0',
-  queryGeneratorVersion: '2.0.0'
+  methodologyVersion: '2.1.0',
+  classifierVersion: '2.1.0',
+  queryGeneratorVersion: '2.1.0'
 });
 
 export const QUALIFICATIONS = Object.freeze([
@@ -31,6 +31,53 @@ const hash = value => {
   return (n >>> 0).toString(36);
 };
 
+const semanticConcepts = [
+  ['play_kitchen', /\b(?:play|toy|children'?s?)\s+kitchens?\b|\bkitchen\s+play\s*sets?\b|\bplay\s+kitchens?\b/i],
+  ['toddler_tower', /\b(?:toddler|learning|kitchen|helper)\s+(?:tower|step stool)\b|\bkitchen\s+step\s+stool\b/i],
+  ['outdoor_playset', /\b(?:slide|swing|outdoor|playground)\s+play\s*sets?\b|\bplayground\s+equipment\b/i],
+  ['entrapment', /\bentrap\w*\b|\b(?:head|neck|body|torso|clothing|shirt)\b.{0,45}\b(?:stuck|trapped|caught|lodged)\b|\b(?:stuck|trapped|caught|lodged)\b.{0,45}\b(?:head|neck|body|torso|clothing|shirt)\b/i],
+  ['asphyxia', /\basphyxi\w*\b|\bstrangul\w*\b|\bsuffocat\w*\b|\bpositional\s+asphyxia\b/i],
+  ['tip_over', /\btip(?:ped|ping)?[ -]?over\b|\bunstable\b/i],
+  ['fall', /\bfall(?:s|en|ing)?\b|\bfell\b/i],
+  ['fire', /\bfire\b|\bflame\b|\bignit\w*\b/i],
+  ['burn', /\bburn(?:s|ed|t|ing)?\b|\bscald\w*\b/i],
+  ['ingestion', /\bingest\w*\b|\bswallow\w*\b/i],
+  ['child', /\bchild(?:ren)?\b|\btoddler\b|\binfant\b|\bkid(?:s)?\b/i]
+];
+const concepts = value => new Set(semanticConcepts.filter(([, pattern]) => pattern.test(clean(value))).map(([name]) => name));
+const PRODUCT_CONCEPTS = new Set(['play_kitchen', 'toddler_tower', 'outdoor_playset']);
+const HAZARD_CONCEPTS = new Set(['entrapment', 'asphyxia', 'tip_over', 'fall', 'fire', 'burn', 'ingestion']);
+const conceptOverlap = (left, right, allowed) => {
+  const a = [...left].filter(value => allowed.has(value));
+  const b = new Set([...right].filter(value => allowed.has(value)));
+  return a.length ? a.filter(value => b.has(value)).length / a.length : 0;
+};
+const distinctiveTokens = value => tokens(value).filter(token => !['model', 'play', 'kitchen', 'children', 'child', 'toddler', 'product', 'products', 'wooden'].includes(token));
+
+function productIdentityScore(entity, body) {
+  const normalizedBody = lower(body);
+  const exactModel = entity.models.some(model => lower(model).length >= 3 && normalizedBody.includes(lower(model)));
+  const exactProduct = normalizedBody.includes(lower(entity.productName));
+  const brandMatch = entity.brand && lower(entity.brand).length >= 3 && normalizedBody.includes(lower(entity.brand));
+  const candidates = [entity.productName, entity.productClass, ...entity.aliases].filter(Boolean);
+  const lexical = Math.max(0, ...candidates.map(value => overlapScore(value, body)));
+  const entityConcepts = concepts(`${entity.productName} ${entity.productClass} ${entity.aliases.join(' ')}`);
+  const bodyConcepts = concepts(body);
+  const semanticProduct = conceptOverlap(entityConcepts, bodyConcepts, PRODUCT_CONCEPTS);
+  const entityProductConcepts = [...entityConcepts].filter(value => PRODUCT_CONCEPTS.has(value));
+  const bodyProductConcepts = [...bodyConcepts].filter(value => PRODUCT_CONCEPTS.has(value));
+  const conceptConflict = entityProductConcepts.length && bodyProductConcepts.length && semanticProduct === 0;
+  const distinctive = distinctiveTokens(entity.productName);
+  const distinctiveHits = distinctive.filter(token => tokens(body).includes(token));
+  const phraseAnchor = distinctive.length >= 2 && distinctiveHits.length >= 2;
+  let score = Math.max(lexical, exactProduct ? 94 : 0, exactModel ? 100 : 0);
+  if (semanticProduct) score = Math.max(score, brandMatch ? 82 : phraseAnchor ? 72 : 58);
+  if (brandMatch && lexical >= 45) score = Math.max(score, 75);
+  if (conceptConflict && !exactModel && !exactProduct) score = Math.min(score, 34);
+  const tier = exactModel || exactProduct ? 'exact_identity' : (brandMatch || phraseAnchor) && score >= 70 ? 'probable_identity' : semanticProduct ? 'category_hazard_review' : 'weak';
+  return { score: clamp(score), tier, exactModel, exactProduct, brandMatch: Boolean(brandMatch), phraseAnchor, semanticProductScore: clamp(semanticProduct * 100), conceptConflict: Boolean(conceptConflict) };
+}
+
 export function normalizeRecallEntity(record) {
   const productName = clean(record.product || record.heading);
   const heading = clean(record.heading || productName);
@@ -47,7 +94,10 @@ export function normalizeRecallEntity(record) {
     heading !== productName ? heading : '',
     `${brand} ${productClass}`,
     productClass,
-    productClass.replace(/electric bicycle/gi, 'e-bike').replace(/recreational off highway vehicle/gi, 'ROV')
+    productClass.replace(/electric bicycle/gi, 'e-bike').replace(/recreational off highway vehicle/gi, 'ROV'),
+    /\bplay kitchens?\b/i.test(productName) ? 'toy kitchen' : '',
+    /\bplay kitchens?\b/i.test(productName) ? 'kitchen playset' : '',
+    /\b(?:toddler|learning|helper) tower\b/i.test(productName) ? 'kitchen step stool' : ''
   ]).filter(value => lower(value) !== lower(productName));
   return {
     recallId: record.id,
@@ -148,9 +198,8 @@ function overlapScore(target, candidate) {
 
 export function scoreCandidate(entity, candidate) {
   const body = `${candidate.title || ''} ${candidate.text || ''}`;
-  const exactModel = entity.models.some(model => lower(body).includes(lower(model)));
-  const exactProduct = lower(body).includes(lower(entity.productName));
-  const productMatchScore = clamp(Math.max(overlapScore(entity.productName, body), exactProduct ? 92 : 0, exactModel ? 100 : 0));
+  const productIdentity = productIdentityScore(entity, body);
+  const productMatchScore = productIdentity.score;
   const harm = classifyActualHarm(candidate);
   const hazardTerms = uniq([...entity.normalizedHazards, ...entity.normalizedHazards.flatMap(key => taxonomy.hazardExpansions[key] || [])]);
   const hazardMatchScore = clamp(Math.max(0, ...hazardTerms.map(term => lower(body).includes(lower(term)) ? 90 : overlapScore(term, body))));
@@ -165,7 +214,63 @@ export function scoreCandidate(entity, candidate) {
   if (coverage.postRecall) confidence -= 20;
   if (harm.genericOnly) confidence -= 30;
   if (productMatchScore < 45) confidence -= 25;
-  return { productMatchScore, harmMatchScore: harm.actualHarm ? harm.confidence : 0, hazardMatchScore, timingScore, sourceScore, geographyScore, confidence: clamp(confidence), daysBefore, harm, coverage };
+  return { productMatchScore, productMatchTier: productIdentity.tier, productMatchBasis: productIdentity, harmMatchScore: harm.actualHarm ? harm.confidence : 0, hazardMatchScore, timingScore, sourceScore, geographyScore, confidence: clamp(confidence), daysBefore, harm, coverage };
+}
+
+export function scoreActionMatch(lead, action) {
+  const actionEntity = normalizeRecallEntity({
+    id: action.id || action.recallNumber || 'action',
+    date: action.date || action.actionDate,
+    product: action.product || action.title,
+    heading: action.title,
+    brand: action.brand,
+    models: action.models,
+    aliases: action.aliases,
+    hazard: action.hazard,
+    incidents: action.incidents,
+    knownIncidentLocations: action.knownIncidentLocations,
+    victimAges: action.victimAges
+  });
+  const leadText = `${lead.product || ''} ${lead.title || ''} ${lead.harm || lead.text || ''}`;
+  const identity = productIdentityScore(actionEntity, leadText);
+  const actionConcepts = concepts(`${action.hazard || ''} ${action.incidents || ''}`);
+  const leadConcepts = concepts(`${lead.harm || lead.text || ''} ${lead.title || ''}`);
+  const hazardSemanticScore = clamp(conceptOverlap(actionConcepts, leadConcepts, HAZARD_CONCEPTS) * 100);
+  const actionBrand = lower(action.brand);
+  const leadBrand = lower(lead.brand);
+  const brandConflict = Boolean(actionBrand && leadBrand && actionBrand !== leadBrand);
+  const actionModels = new Set((action.models || []).map(lower));
+  const leadModels = new Set((lead.models || []).map(lower));
+  const modelConflict = Boolean(actionModels.size && leadModels.size && ![...actionModels].some(value => leadModels.has(value)));
+  let score = identity.score * .62 + hazardSemanticScore * .28 + (lead.country === 'United States' ? 5 : 2) + 5;
+  if (brandConflict) score -= 30;
+  if (modelConflict) score -= 40;
+  if (identity.conceptConflict) score -= 25;
+  score = clamp(score);
+  const identityAnchor = identity.exactModel || identity.exactProduct || identity.brandMatch || identity.phraseAnchor;
+  if (!identityAnchor) score = Math.min(score, 68);
+  let matchTier = 'rejected';
+  if (!brandConflict && !modelConflict && identity.exactModel && hazardSemanticScore >= 35) matchTier = 'exact';
+  else if (!brandConflict && !modelConflict && identityAnchor && identity.score >= 70 && hazardSemanticScore >= 35) matchTier = 'probable';
+  else if (!brandConflict && !modelConflict && !identity.conceptConflict && identity.semanticProductScore >= 50 && hazardSemanticScore >= 35) matchTier = 'related_review';
+  return {
+    score,
+    matchTier,
+    linkable: matchTier === 'exact' || matchTier === 'probable',
+    requiresHumanReview: matchTier !== 'rejected',
+    productScore: identity.score,
+    productMatchTier: identity.tier,
+    hazardSemanticScore,
+    identityAnchor: Boolean(identityAnchor),
+    conflicts: [...(brandConflict ? ['brand'] : []), ...(modelConflict ? ['model'] : []), ...(identity.conceptConflict ? ['product_type'] : [])],
+    rationale: matchTier === 'related_review'
+      ? 'Product category and injury mechanism are similar, but no brand, model, or distinctive product-name anchor confirms identity.'
+      : matchTier === 'probable'
+        ? 'Distinctive product identity and injury-mechanism signals align despite wording variation.'
+        : matchTier === 'exact'
+          ? 'Model identity and injury-mechanism signals align.'
+          : 'The available product identity and mechanism evidence is insufficient or conflicts.'
+  };
 }
 
 export function classifyCandidate(entity, candidate, { productThreshold = 60 } = {}) {

@@ -136,3 +136,16 @@ test('no-linked-action highlights are bounded, reviewable, and preserve the rece
     assert.ok(fullFeedUrls.has(signal.url));
   }
 });
+
+test('Florida kitchen-playset case preserves the similar CPSC recall as review-only evidence', () => {
+  const lead = data.pastYearIndependentNews.find(value => /Florida toddler dies after getting head stuck/i.test(value.title));
+  assert.ok(lead);
+  assert.equal(lead.timingStatus, 'No linked action');
+  assert.equal(lead.relatedActionCandidates.length, 1);
+  const related = lead.relatedActionCandidates[0];
+  assert.equal(related.recallNumber, '25-415');
+  assert.match(related.matchTier, /review only/i);
+  assert.match(related.linkStatus, /Not confirmed/i);
+  assert.match(lead.boundary, /different named product/i);
+  assert.equal(data.methodology.relatedActionReviewCount, 1);
+});

@@ -1212,9 +1212,9 @@
     "qualifiedEvidence": "Independent public reporting about an actual consumer-product injury or death, published strictly before the relevant agency action, with a defensible product and hazard match.",
     "exclusions": "Recall- or alert-announcement coverage, same-day or post-action reporting, hazard-only stories without an actual injury/death, and ambiguous product matches are excluded from lead-time metrics; the separate past-year feed uses the broader rule described below.",
     "newsSearchPipeline": "Recall ingestion → Entity normalization → Query generation → Candidate retrieval → Candidate classification/ranking → Incident clustering",
-    "searchMethodologyVersion": "2.0.0",
-    "searchClassifierVersion": "2.0.0",
-    "queryGeneratorVersion": "2.0.0",
+    "searchMethodologyVersion": "2.1.0",
+    "searchClassifierVersion": "2.1.0",
+    "queryGeneratorVersion": "2.1.0",
     "liveNewsProviders": [
       "Google News RSS",
       "Bing News RSS",
@@ -1236,6 +1236,7 @@
     "pastYearCategoryCount": 15,
     "noLinkedActionCount": 16,
     "noLinkedActionAsOf": "August 30, 2026",
+    "relatedActionReviewCount": 1,
     "recentUnlinkedWindow": "August 17–30, 2026",
     "recentUnlinkedSignalCount": 4,
     "actionSearchBoundary": "No matching product-specific CPSC Recall or Safety Alert was located in the bounded review through August 30, 2026. Not located is not proof that no action exists.",
@@ -1388,15 +1389,29 @@
       "country": "United States",
       "category": "Children’s furniture and playsets",
       "product": "Children’s kitchen playset",
-      "harm": "A three-year-old was found unresponsive with his head stuck in a kitchen playset, was hospitalized in critical condition, and later died.",
+      "harm": "A three-year-old was found unresponsive with her head stuck in a kitchen playset, was hospitalized in critical condition, and later died; later reporting cited probable positional asphyxia.",
       "sourceBasis": "Local reporting based on Boynton Beach police and hospital outcome information.",
-      "boundary": "The brand/model, opening dimensions, assembly condition, and precise entrapment mechanism were not reported; the investigation was ongoing.",
+      "boundary": "Police reported no identifying brand, make, or model markings. Photographs appeared similar to an Anatex Country Living Kitchen missing its sink insert, but that identification was not confirmed. The 2025 KidKraft recall involves a different named product and a clothing-on-hook strangulation mechanism, so it is shown only as a related action to review—not as a linked recall.",
       "confidence": 92,
       "timingStatus": "No linked action",
       "actionContext": null,
       "actionUrl": null,
-      "actionSearchBoundary": "No matching product-specific CPSC Recall or Safety Alert was located in the bounded review through August 30, 2026.",
-      "analystPriority": "Identify the playset and preserve measurements, assembly state, warnings, and entrapment geometry for comparison with applicable standards and incident reports."
+      "actionSearchBoundary": "No matching product-specific CPSC Recall or Safety Alert was located in the bounded review through August 31, 2026. Fuzzy matching surfaced CPSC recall 25-415 for a different KidKraft play-kitchen model as a category-and-hazard analogue only.",
+      "analystPriority": "Confirm the manufacturer and model from purchase records or physical evidence; preserve the missing sink insert, measurements, assembly state, warnings, and entrapment geometry before deciding whether any recall applies.",
+      "relatedActionCandidates": [
+        {
+          "agency": "U.S. CPSC",
+          "actionType": "Recall",
+          "recallNumber": "25-415",
+          "actionDate": "July 31, 2025",
+          "title": "Backyard Kids Recalls KidKraft Farm to Table Play Kitchens Due to Strangulation Hazard; One Death Reported",
+          "url": "https://www.cpsc.gov/Recalls/2025/Backyard-Kids-Recalls-KidKraft-Farm-to-Table-Play-Kitchens-Due-to-Strangulation-Hazard-One-Death-Reported",
+          "matchTier": "Related category/hazard — review only",
+          "matchScore": 68,
+          "rationale": "Both records concern children’s play kitchens, entrapment/asphyxia, and a child death. The Florida product has no confirmed brand or model, however, and the reported opening/head-entrapment scenario differs from the recalled KidKraft model’s clothing-on-hook mechanism.",
+          "linkStatus": "Not confirmed; excluded from linked-action and lead-time metrics"
+        }
+      ]
     },
     {
       "date": "July 29, 2026",

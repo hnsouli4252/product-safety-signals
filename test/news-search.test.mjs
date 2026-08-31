@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import {
   normalizeRecallEntity, expandHarmTerms, generateQueries, progressiveWindows,
   classifyActualHarm, detectRecallCoverage, classifyCandidate, clusterIncidents,
-  selectEarliestQualified, SearchCache, applyReviewerOverride, runRecallSearch, VERSIONS
+  selectEarliestQualified, scoreActionMatch, SearchCache, applyReviewerOverride, runRecallSearch, VERSIONS
 } from '../src/news-search/index.mjs';
 import { evaluateBenchmark } from '../src/news-search/evaluate.mjs';
 
@@ -46,6 +46,63 @@ test('recall coverage and post-recall articles cannot qualify as pre-recall evid
     publicationDate: entity.recallDate, text: 'CPSC announced the recall. A consumer was injured. Consumers should stop using the product.'
   });
   assert.equal(classified.qualification, 'recall_announcement');
+});
+
+test('Florida kitchen-playset death surfaces the KidKraft recall for review without falsely linking it', () => {
+  const lead = {
+    country: 'United States',
+    product: 'Children’s kitchen playset',
+    title: 'Florida toddler dies after getting head stuck in kitchen playset',
+    harm: 'A three-year-old became trapped by the head in a toy kitchen and died from probable positional asphyxia.'
+  };
+  const action = {
+    recallNumber: '25-415', date: '2025-07-31', brand: 'KidKraft', models: ['53411'],
+    product: 'KidKraft Farm to Table Model Play Kitchen',
+    hazard: 'Children’s clothing can get caught on accessory hooks, posing strangulation and asphyxia hazards.',
+    incidents: 'A toddler died after his shirt caught on a hook while crawling through the rear opening.'
+  };
+  const match = scoreActionMatch(lead, action);
+  assert.equal(match.matchTier, 'related_review');
+  assert.equal(match.linkable, false);
+  assert.ok(match.score <= 68);
+  assert.equal(match.productMatchTier, 'category_hazard_review');
+});
+
+test('distinctive product wording and mechanism variants can produce a probable action match', () => {
+  const match = scoreActionMatch({
+    country: 'United States', product: 'Farm-to-table toy kitchen',
+    title: 'Child strangled after shirt snagged inside play kitchen',
+    harm: 'The child was asphyxiated when clothing caught on an accessory hook.'
+  }, {
+    recallNumber: '25-415', date: '2025-07-31', brand: 'KidKraft', models: ['53411'],
+    product: 'KidKraft Farm to Table Model Play Kitchen',
+    hazard: 'Clothing can get caught on hooks, posing strangulation and asphyxia hazards.'
+  });
+  assert.equal(match.matchTier, 'probable');
+  assert.equal(match.linkable, true);
+  assert.ok(match.identityAnchor);
+});
+
+test('similar injury language does not override conflicting product types or brands', () => {
+  const wrongType = scoreActionMatch({
+    country: 'United States', product: 'Children’s kitchen playset',
+    title: 'Toddler head trapped in toy kitchen', harm: 'A child died from entrapment and asphyxia.'
+  }, {
+    date: '2026-08-13', product: 'Outdoor slide playsets', brand: 'Wenzhou Yidian',
+    hazard: 'Head and neck entrapment can cause asphyxia and death.'
+  });
+  assert.equal(wrongType.matchTier, 'rejected');
+  assert.ok(wrongType.conflicts.includes('product_type'));
+
+  const wrongBrand = scoreActionMatch({
+    country: 'United States', product: 'Anatex Country Living toy kitchen', brand: 'Anatex',
+    title: 'Child trapped in play kitchen', harm: 'A child died from entrapment and asphyxia.'
+  }, {
+    date: '2025-07-31', product: 'KidKraft Farm to Table Model Play Kitchen', brand: 'KidKraft',
+    hazard: 'Clothing can get caught on hooks, posing strangulation and asphyxia hazards.'
+  });
+  assert.equal(wrongBrand.matchTier, 'rejected');
+  assert.ok(wrongBrand.conflicts.includes('brand'));
 });
 
 test('ranking, clustering, and earliest selection retain one incident and one earliest article', () => {
