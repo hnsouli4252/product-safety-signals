@@ -70,16 +70,22 @@ test('early warnings are descending and distinguish Recall from Safety alert', (
   assert.match(cuisinart.boundary, /excluded from exact\/probable-product recall averages/i);
 });
 
-test('30-day feed retains qualified independent harm reporting only', () => {
-  for (const lead of data.recentIndependentNews) {
+test('past-year feed retains qualified U.S. independent harm reporting only', () => {
+  for (const lead of data.pastYearIndependentNews) {
     const date = new Date(lead.date);
-    assert.ok(date >= new Date('2026-08-01T00:00:00Z'));
+    assert.ok(date >= new Date('2025-08-31T00:00:00Z'));
     assert.ok(date <= new Date('2026-08-30T23:59:59Z'));
     assert.equal(lead.articleType, 'Independent consumer-harm coverage');
+    assert.equal(lead.country, 'United States');
     assert.doesNotMatch(lead.title, /recall alert|recalled/i);
+    assert.ok(['Pre-action', 'Post-action', 'No linked action'].includes(lead.timingStatus));
   }
-  assert.equal(data.recentIndependentNews.length, 2);
-  assert.equal(data.methodology.recentQualifiedNewsCount, 2);
-  assert.ok(data.recentIndependentNews.every(lead => /squishy/i.test(lead.product)));
-  assert.ok(data.recentIndependentNews.every(lead => lead.boundary && lead.sourceBasis && lead.harm));
+  assert.equal(data.pastYearIndependentNews.length, 13);
+  assert.equal(data.methodology.pastYearQualifiedNewsCount, 13);
+  assert.equal(data.methodology.harmNewsGeography, 'United States incidents only');
+  assert.equal(new Set(data.pastYearIndependentNews.map(lead => lead.category)).size, 8);
+  assert.ok(data.pastYearIndependentNews.every(lead => lead.boundary && lead.sourceBasis && lead.harm));
+  assert.ok(data.pastYearIndependentNews.some(lead => lead.timingStatus === 'Pre-action'));
+  assert.ok(data.pastYearIndependentNews.some(lead => lead.timingStatus === 'Post-action'));
+  assert.ok(data.pastYearIndependentNews.some(lead => lead.timingStatus === 'No linked action'));
 });
