@@ -80,7 +80,8 @@ async function liveSearch(request,url){
   const window=run.windowsSearched[windowIndex];
   const cache=globalThis.caches?.default;
   const cacheKey=new Request(url.toString(),{method:'GET',headers:{accept:'application/json'}});
-  const cached=cache?await cache.match(cacheKey):null;
+  let cached=null;
+  if(cache){try{cached=await cache.match(cacheKey)}catch{cached=null}}
   if(cached)return cached;
   const results=await Promise.all(queries.map(query=>liveProvider.search({entity:run.entity,query,window})));
   const providerMap=new Map();
@@ -100,7 +101,7 @@ async function liveSearch(request,url){
   const selection=selectEarliestQualified(clusters,run.entity.recallDate);
   const payload={live:true,reviewStatus:'unreviewed',humanReviewRequired:true,recallId,queries,window,offset,nextOffset:offset+limit<run.queries.length?offset+limit:null,nextWindow:windowIndex+1<run.windowsSearched.length?windowIndex+1:null,providerStatus,urlsRetrieved:unique.size,candidatesEvaluated:candidates.length,incidentClustersCreated:clusters.length,qualifiedCandidateCount:candidates.filter(value=>value.qualification==='qualified_pre_recall').length,selectedCandidate:selection.firstQualifiedArticle,candidates,methodologyVersion:run.methodologyVersion,classifierVersion:run.classifierVersion,retrievedAt:new Date().toISOString()};
   const response=json(payload,200,'public, max-age=900');
-  if(cache)await cache.put(cacheKey,response.clone());
+  if(cache){try{await cache.put(cacheKey,response.clone())}catch{/* HTTP cache headers still apply */}}
   return response;
 }
 export default {async fetch(request){const url=new URL(request.url);if(url.pathname==='/health')return new Response('ok',{headers:{'content-type':'text/plain'}});if(url.pathname==='/api/evidence')return json(evidence,200,'public, max-age=300');if(url.pathname==='/api/news-search'){try{return await liveSearch(request,url)}catch(error){return json({error:'Live news search temporarily unavailable',detail:error?.message||'Unknown provider error',humanReviewRequired:true},502)}}return new Response(html,{headers:{'content-type':'text/html; charset=utf-8','cache-control':'public, max-age=300','x-content-type-options':'nosniff','referrer-policy':'strict-origin-when-cross-origin'}})}};`;
