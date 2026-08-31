@@ -53,13 +53,21 @@ test('recall-announcement coverage is excluded from all timing and feed metrics'
 });
 
 test('early warnings are descending and distinguish Recall from Safety alert', () => {
-  assert.deepEqual(data.earlyWarnings.map(item => item.leadDays), [497, 206]);
+  assert.deepEqual(data.earlyWarnings.map(item => item.leadDays), [497, 206, 58]);
   assert.deepEqual(new Set(data.earlyWarnings.map(item => item.actionType)), new Set(['Recall', 'Safety alert']));
   const squishy = data.earlyWarnings.find(item => item.id === 'squishy-toys-safety-alert');
   assert.equal(squishy.actionType, 'Safety alert');
   assert.equal(squishy.leadDays, 497);
   assert.match(squishy.boundary, /not a recall/i);
   assert.match(squishy.boundary, /does not name NeeDoh/i);
+  assert.equal(squishy.supportingSources.length, 2);
+  assert.ok(squishy.supportingSources.every(source => new Date(source.date) < new Date(squishy.actionDate)));
+  const cuisinart = data.earlyWarnings.find(item => item.id === 'wire-grill-brush-cuisinart-expansion');
+  assert.equal(cuisinart.actionType, 'Recall');
+  assert.equal(cuisinart.actionLabel, 'Recall expansion');
+  assert.equal(cuisinart.leadDays, 58);
+  assert.match(cuisinart.boundary, /did not identify the brush brand or model/i);
+  assert.match(cuisinart.boundary, /excluded from exact\/probable-product recall averages/i);
 });
 
 test('30-day feed retains qualified independent harm reporting only', () => {
@@ -70,5 +78,8 @@ test('30-day feed retains qualified independent harm reporting only', () => {
     assert.equal(lead.articleType, 'Independent consumer-harm coverage');
     assert.doesNotMatch(lead.title, /recall alert|recalled/i);
   }
-  assert.equal(data.recentIndependentNews.length, 0);
+  assert.equal(data.recentIndependentNews.length, 2);
+  assert.equal(data.methodology.recentQualifiedNewsCount, 2);
+  assert.ok(data.recentIndependentNews.every(lead => /squishy/i.test(lead.product)));
+  assert.ok(data.recentIndependentNews.every(lead => lead.boundary && lead.sourceBasis && lead.harm));
 });

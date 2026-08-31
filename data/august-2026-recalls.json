@@ -792,7 +792,23 @@
       "leadDays": 497,
       "confidence": 84,
       "rationale": "The article documents actual chemical-burn injuries involving a gel-filled squishy toy; the later CPSC action addresses bursting/leaking squishy toys and serious burn hazards at the category level.",
-      "boundary": "Category-and-hazard match only. The CPSC action is a broad Safety Alert, not a recall, and does not name NeeDoh or the Nice Cube. It is excluded from recall-only averages."
+      "boundary": "Category-and-hazard match only. The CPSC action is a broad Safety Alert, not a recall, and does not name NeeDoh or the Nice Cube. It is excluded from recall-only averages.",
+      "supportingSources": [
+        {
+          "date": "July 27, 2026",
+          "publisher": "Axios Des Moines",
+          "title": "Iowa case highlights rising NeeDoh burn reports",
+          "url": "https://www.axios.com/local/des-moines/2026/07/27/iowa-needoh-burn-hot-car",
+          "note": "Independent reporting on an emergency-department-treated child and a broader review of published CPSC incident reports; nine days before the Safety Alert."
+        },
+        {
+          "date": "July 29, 2026",
+          "publisher": "Axios Boston",
+          "title": "Microwave fidget toy trend still burning kids",
+          "url": "https://www.axios.com/local/boston/2026/07/29/microwave-fidget-toy-burns-kids-boston-shriners-gel-scald-chemical-burn-warning",
+          "note": "Independent reporting that Shriners clinicians were treating at least one microwave-related gel-toy burn patient weekly; seven days before the Safety Alert."
+        }
+      ]
     },
     {
       "id": "brookstone-fire-pit-recall",
@@ -809,9 +825,51 @@
       "confidence": 90,
       "rationale": "The article describes a Brookstone tabletop fire pit bought at Macy’s, distributed by Southern Telecom, that allegedly erupted and caused second- and third-degree burns—the same product family, seller/importer chain, injury type, and flame-jetting hazard as the later recall.",
       "boundary": "Probable exact product-family match; the article does not state the recalled model identifier, and lawsuit allegations are not adjudicated findings."
+    },
+    {
+      "id": "wire-grill-brush-cuisinart-expansion",
+      "actionType": "Recall",
+      "actionLabel": "Recall expansion",
+      "product": "Metal-wire grill brushes / Cuisinart expansion",
+      "articleDate": "June 30, 2026",
+      "articlePublisher": "CBS Minnesota",
+      "articleTitle": "Minnesota teen has emergency surgery after unknowingly swallowing wire bristle during backyard barbecue",
+      "articleUrl": "https://www.cbsnews.com/minnesota/news/wire-bristle-burger-emergency-surgery-teen/",
+      "actionDate": "August 27, 2026",
+      "actionTitle": "Cuisinart Metal Wire Bristle Grill Brushes",
+      "actionUrl": "https://www.cpsc.gov/Recalls/2026/Conair-Expands-Recall-of-Cuisinart-Grill-Brushes-Due-to-Ingestion-Hazard-Over-3-6-Million-Brushes-Now-Recalled",
+      "leadDays": 58,
+      "confidence": 68,
+      "rationale": "The article documents a teen who swallowed a bristle from a metal-wire grill-cleaning brush, suffered a punctured intestine, and required emergency bowel surgery—the same product category, ingestion mechanism, and serious internal-injury outcome addressed by the later Cuisinart expansion.",
+      "boundary": "Category-and-hazard match only: CBS did not identify the brush brand or model. The article was 58 days before the August 27 expansion and two days before Cuisinart’s original July 2 recall. It is excluded from exact/probable-product recall averages."
     }
   ],
-  "recentIndependentNews": [],
+  "recentIndependentNews": [
+    {
+      "date": "August 20, 2026",
+      "publisher": "WBAL NewsRadio / Hearst Television",
+      "title": "Counterfeit squishy toy helped fuel Pennsylvania row home fire, fire marshal says",
+      "url": "https://www.wbal.com/counterfeit-squishy-toy-helped-fuel-pennsylvania-row-home-fire-fire-marshal-says",
+      "articleType": "Independent consumer-harm coverage",
+      "product": "Counterfeit squishy dumpling toy",
+      "harm": "One person was hospitalized with minor burns after a row-home fire; the Lancaster fire marshal said the toy acted as a catalyst that spread flammable material.",
+      "sourceBasis": "Local reporting based on the fire marshal’s investigation and laboratory testing, not a recall announcement.",
+      "boundary": "The fire marshal described the toy as a catalyst, not the initial ignition source. Published after the August 5 CPSC Safety Alert, so it is a current harm lead but not a pre-action timing case.",
+      "confidence": 88
+    },
+    {
+      "date": "August 11, 2026",
+      "publisher": "NL Times",
+      "title": "Squishy toy that exploded in French boy’s face still sold in Netherlands",
+      "url": "https://nltimes.nl/2026/08/11/squishy-toy-exploded-french-boys-face-still-sold-netherlands",
+      "articleType": "Independent consumer-harm coverage",
+      "product": "Cool Mix Supergel squishy toy",
+      "harm": "An eight-year-old boy reportedly suffered second-degree burns to his face and chest when hot, sticky gel burst from the toy.",
+      "sourceBasis": "Independent news report citing the child’s mother and an investigation by French authorities; the article is not a CPSC action announcement.",
+      "boundary": "International incident reported after the August 5 U.S. category-level Safety Alert; useful as a harm lead, not as evidence that preceded that action.",
+      "confidence": 92
+    }
+  ],
   "methodology": {
     "qualifiedEvidence": "Independent public reporting about an actual consumer-product injury or death, published strictly before the relevant agency action, with a defensible product and hazard match.",
     "exclusions": "Recall- or alert-announcement coverage, same-day or post-action reporting, hazard-only stories without an actual injury/death, and ambiguous product matches are excluded from lead-time metrics and the 30-day harm feed.",
@@ -821,6 +879,13 @@
       "averageLeadDays": 206,
       "longestLeadDays": 206
     },
-    "excludedRecallCoverageCount": 7
+    "excludedRecallCoverageCount": 7,
+    "recentQualifiedNewsCount": 2
+  },
+  "evidenceSearchAudit": {
+    "reviewed": "August 30, 2026",
+    "cuisinart": "A broader search located strong pre-action reporting about the exact product category and injury mechanism, but no independent article that identified a Cuisinart model before the July 2 original recall or August 27 expansion.",
+    "squishy": "Independent pre-alert injury reporting was located from Arizona’s Family and Axios. Post-alert August harm articles are retained only in the 30-day feed.",
+    "excludedCoverage": "Recall- and alert-announcement articles remain excluded even when they repeat agency incident counts."
   }
 }
