@@ -1,0 +1,20 @@
+{
+  "fatalityTerms": ["death", "died", "dead", "fatal", "fatality", "killed", "deceased", "dies"],
+  "generalInjuryTerms": ["injured", "injury", "hurt", "hospitalized", "hospitalised", "emergency room", "ER", "treated", "medical treatment"],
+  "injuryTypes": ["burn", "burned", "burns", "fracture", "broken bone", "laceration", "cut", "amputation", "poisoning", "electrocution", "shock", "concussion", "head injury", "internal injury"],
+  "eventTerms": ["fire", "house fire", "apartment fire", "explosion", "battery fire", "electrocution", "choking", "drowning", "fall", "tip-over", "entrapment", "strangulation", "collapse", "collision", "overheating", "carbon monoxide"],
+  "hazardExpansions": {
+    "tip-over": ["crushed", "killed", "child death", "head injury", "furniture fell", "dresser fell"],
+    "fire": ["house fire", "apartment fire", "burned", "burns", "smoke inhalation", "hospitalized", "killed"],
+    "burn": ["burned", "burns", "third-degree burn", "hospitalized", "skin graft"],
+    "battery": ["battery fire", "thermal runaway", "explosion", "burned", "apartment fire"],
+    "choking": ["choked", "airway obstruction", "respiratory distress", "hospitalized", "died"],
+    "entrapment": ["trapped", "asphyxiation", "strangulation", "suffocation", "died"],
+    "fall": ["fell", "fracture", "head injury", "concussion", "hospitalized"],
+    "electrocution": ["electric shock", "shocked", "electrocuted", "burned", "died"],
+    "carbon monoxide": ["CO poisoning", "poisoning", "unconscious", "hospitalized", "died"],
+    "ingestion": ["swallowed", "internal injury", "bowel perforation", "emergency surgery", "hospitalized"],
+    "collision": ["crash", "struck", "rollover", "ejected", "killed", "hospitalized"]
+  },
+  "recallCoverageSignals": ["CPSC announced", "Consumer Product Safety Commission announced", "recalled Thursday", "recalled Friday", "according to the recall notice", "consumers should stop using", "recall involves", "recall includes", "refund available", "contact the company"]
+}

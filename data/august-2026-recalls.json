@@ -846,7 +846,11 @@
   ],
   "methodology": {
     "qualifiedEvidence": "Independent public reporting about an actual consumer-product injury or death, published strictly before the relevant agency action, with a defensible product and hazard match.",
-    "exclusions": "Recall- or alert-announcement coverage, same-day or post-action reporting, hazard-only stories without an actual injury/death, and ambiguous product matches are excluded from lead-time metrics and lead-time metrics; the separate past-year feed uses the broader rule described below.",
+    "exclusions": "Recall- or alert-announcement coverage, same-day or post-action reporting, hazard-only stories without an actual injury/death, and ambiguous product matches are excluded from lead-time metrics; the separate past-year feed uses the broader rule described below.",
+    "newsSearchPipeline": "Recall ingestion → Entity normalization → Query generation → Candidate retrieval → Candidate classification/ranking → Incident clustering",
+    "searchMethodologyVersion": "2.0.0",
+    "searchClassifierVersion": "2.0.0",
+    "queryGeneratorVersion": "2.0.0",
     "recallMetrics": {
       "qualifiedMatches": 1,
       "unmatchedRecalls": 51,
@@ -867,7 +871,7 @@
   "evidenceSearchAudit": {
     "reviewed": "August 30, 2026",
     "cuisinart": "A broader search located strong pre-action reporting about the exact product category and injury mechanism, but no independent article that identified a Cuisinart model before the July 2 original recall or August 27 expansion.",
-    "squishy": "Independent pre-alert injury reporting was located from Arizona’s Family and Axios. Post-alert August harm articles are retained only in the 30-day feed.",
+    "squishy": "Independent pre-alert injury reporting was located from Arizona’s Family and Axios. Post-alert harm articles are retained only as contextual records in the separate past-year feed.",
     "excludedCoverage": "Recall- and alert-announcement articles remain excluded even when they repeat agency incident counts.",
     "pastYear": "The primary feed contains only U.S.-reported incidents and excludes recall/agency-announcement articles. International incidents were reviewed but are not counted."
   },
