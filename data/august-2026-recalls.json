@@ -1218,6 +1218,8 @@
     "liveNewsProviders": [
       "Google News RSS",
       "Bing News RSS",
+      "Yahoo News RSS",
+      "Yahoo.com News Search",
       "GDELT DOC 2.0"
     ],
     "liveSearchCacheMinutes": 15,

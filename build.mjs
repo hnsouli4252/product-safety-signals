@@ -11,7 +11,7 @@ evidence.searchSystem = {
   ...VERSIONS,
   pipeline: ['Recall ingestion', 'Entity normalization', 'Query generation', 'Candidate retrieval', 'Candidate classification/ranking', 'Incident clustering'],
   targetRawUrlsPerRecall: '50–100',
-  liveProviders: ['Google News RSS', 'Bing News RSS', 'GDELT DOC 2.0'],
+  liveProviders: ['Google News RSS', 'Bing News RSS', 'Yahoo News RSS', 'Yahoo.com News Search', 'GDELT DOC 2.0'],
   liveEndpoint: '/api/news-search',
   liveCacheSeconds: 900,
   progressiveWindows: ['0–30 days', '31–90 days', '91–365 days', '1–3 years', '3–10 years'],
