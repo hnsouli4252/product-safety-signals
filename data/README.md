@@ -2,17 +2,17 @@
 
 This directory contains the source-backed records rendered by Product Safety Signals.
 
-- Review date: August 30, 2026
+- Review date: August 31, 2026
 - Recall window: August 1–27, 2026, the latest CPSC announcement date available at review time
 - Recall count: 52 (17 on August 6, 18 on August 13, 7 on August 20, and 10 on August 27)
 - Primary recall evidence: CPSC's official recall CSV through August 20 plus the current CPSC recall index for August 27
-- Public incident evidence: CPSC recall-notice incident narratives and attempted SaferProducts.gov public lookup
+- Public incident evidence: CPSC recall-notice narratives plus the SaferProducts.gov public database export refreshed August 31
 - U.S. public harm-news window: August 31, 2025–August 30, 2026
 - Qualified pre-recall matches: 1 of 52; average and longest lead time are both 206 days
 - Early-warning cases: 3, with Recall and Safety Alert actions kept separate
-- Qualified past-year U.S. harm-news leads: 13 across 8 product categories
+- Qualified past-year U.S. harm-news leads: 25 across 15 product categories
 
-SaferProducts.gov returned HTTP 503 during review. CPSC notices often describe reports without publishing submission dates. Those records therefore use `reportDate: null` and explain the boundary instead of inferring a date.
+The August 31 SaferProducts.gov refresh produced 10 exact-product matches. Each matched record preserves the report number, submission date, publication date, severity label, direct public-report URL, and a bounded summary. Brand-only, category-only, wrong-model, and mechanism-mismatched candidates remain excluded; unmatched recalls retain `reportDate: null`. Consumer-submitted reports are not treated as independently verified facts or as independent news evidence.
 
 Qualifying evidence must be independent public reporting about an actual consumer-product injury or death, published strictly before the relevant agency action, with a defensible product and hazard match. Recall- or alert-announcement coverage, same-day/post-action reporting, hazard-only stories, and ambiguous product matches are excluded from lead-time calculations. The separate past-year feed uses its own broader inclusion rule while preserving the same recall-coverage exclusion.
 

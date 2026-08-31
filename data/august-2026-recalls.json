@@ -1,6 +1,6 @@
 {
   "asOf": "August 27, 2026",
-  "retrieved": "August 30, 2026",
+  "retrieved": "August 31, 2026",
   "scope": "CPSC recalls announced August 1–27, 2026, the latest announcement date available when reviewed.",
   "officialRecallCsv": "https://www.cpsc.gov/s3fs-public/recall-data/recalls_recall_listing.csv",
   "officialRecallIndex": "https://www.cpsc.gov/Recalls",
@@ -15,9 +15,16 @@
       "incidents": "None reported in the CPSC listing.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/AudioLineOut-Recalls-Studio-Six-Headphone-Amplifiers-Due-to-Risk-of-Serious-Injury-or-Death-from-Electrocution-Hazard",
       "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-717",
@@ -27,8 +34,8 @@
       "hazard": "Small metal bristles can detach, enter food, and cause serious internal injuries requiring surgery.",
       "incidents": "CPSC says Conair is aware of at least 54 reports/reviews, including three consumers who swallowed bristles and sought medical treatment.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Conair-Expands-Recall-of-Cuisinart-Grill-Brushes-Due-to-Ingestion-Hazard-Over-3-6-Million-Brushes-Now-Recalled",
-      "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportDate": "July 3, 2026",
+      "reportBoundary": "The report names Cuisinart model CCB-5014 and states that the grill-cleaning brush shed wires during use. SaferProducts report 20260703-C90B5-2147314502 was submitted July 3, 2026 and published July 22, 2026. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
       "excludedCoverage": [
         {
@@ -41,7 +48,14 @@
           "articleType": "Recall-announcement coverage",
           "exclusionReason": "Excluded from timing and the 30-day harm feed: this article reports the CPSC recall announcement and was published on or after the agency action."
         }
-      ]
+      ],
+      "reportPublicationDate": "July 22, 2026",
+      "reportNumber": "20260703-C90B5-2147314502",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=6134008&handler=Detail",
+      "reportSeverity": "Incident, No Injury",
+      "reportSummary": "The report names Cuisinart model CCB-5014 and states that the grill-cleaning brush shed wires during use.",
+      "reportMatch": "exact_product",
+      "reportTiming": "pre_recall"
     },
     {
       "id": "AUG27-02",
@@ -52,9 +66,16 @@
       "incidents": "None reported in the CPSC listing.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Excel-Industries-Recalls-Accessory-LED-Light-Kits-Due-to-Risk-of-Serious-Injury-from-Fire-Hazard",
       "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "AUG27-09",
@@ -65,9 +86,16 @@
       "incidents": "None reported in the CPSC listing.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/HABA-USA-Recalls-Rainbow-Rattle-Grasping-and-Teething-Toys-Due-to-Risk-of-Serious-Injury-or-Death-from-Choking-and-Ingestion-Hazards",
       "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "AUG27-10",
@@ -78,9 +106,16 @@
       "incidents": "None reported in the CPSC listing.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Kmaier-Recalls-Infant-Walkers-Due-to-Risk-of-Serious-Injury-or-Death-from-Fall-Hazard-Violate-Mandatory-Standard-for-Infant-Walkers",
       "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "AUG27-01",
@@ -91,9 +126,16 @@
       "incidents": "None reported in the CPSC listing.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Little-Loves-and-Co-Recalls-Youth-Clothing-with-Drawstrings-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-Hazard",
       "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "AUG27-08",
@@ -104,9 +146,16 @@
       "incidents": "The August 27 listing does not identify a new dated consumer incident report.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Walmart-Reannounces-Recall-of-Mainstays-Nine-Drawer-Fabric-Dressers-Due-to-Risk-of-Serious-Injury-or-Death-from-Tip-Over-and-Entrapment-Hazards-Walmart-Distributed-Recalled-Dressers-Post-Recall-Sold-to-Consumers-Through-Liquidators",
       "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "AUG27-07",
@@ -117,9 +166,16 @@
       "incidents": "None reported in the CPSC listing.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Diamond-Wipes-International-Recalls-MD-Wipe-Outz-Numbing-Tattoo-Wipes-Due-to-Risk-of-Serious-Injury-or-Death-from-Child-Poisoning-Violate-Mandatory-Standard-for-Child-Resistant-Packaging",
       "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "AUG27-06",
@@ -130,9 +186,16 @@
       "incidents": "None reported in the CPSC listing.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Steelite-Pressure-Washers-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Shock-and-Electrocution-Hazards-Sold-on-Amazon-by-Longer-3D",
       "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "AUG27-05",
@@ -142,10 +205,17 @@
       "hazard": "Missing GFCI protection and an adequate-length power cord pose shock and electrocution hazards.",
       "incidents": "None reported in the CPSC listing.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Pressure-Washers-Recalled-Due-to-Serious-Risk-of-Injury-or-Death-from-Shock-and-Electrocution-Hazards-Sold-on-Amazon-by-YERYORK",
-      "reportDate": null,
-      "reportBoundary": "The CPSC material reviewed does not publish a consumer-report submission date; SaferProducts public service was unavailable during review.",
+      "reportDate": "May 1, 2025",
+      "reportBoundary": "The report identifies a YERYORK YE006 electric pressure washer and alleges that it lacked required GFCI protection. SaferProducts report 20250501-01253-2147331605 was submitted May 1, 2025 and published May 21, 2025. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": "May 21, 2025",
+      "reportNumber": "20250501-01253-2147331605",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=5259257&handler=Detail",
+      "reportSeverity": "Incident, No Injury",
+      "reportSummary": "The report identifies a YERYORK YE006 electric pressure washer and alleges that it lacked required GFCI protection.",
+      "reportMatch": "exact_product",
+      "reportTiming": "pre_recall"
     },
     {
       "id": "26-716",
@@ -156,9 +226,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/CCM-Hockey-U-S-Recalls-FMHVR-Hybrid-Visors-and-ACCHVR-Replacement-Visor-Accessories-Due-to-Risk-of-Injury-from-Laceration-or-Impact-Hazards",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-710",
@@ -169,9 +246,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/KTM-North-America-Recalls-Off-Road-Motorcycles-Due-to-Risk-of-Serious-Injury-or-Death-from-Crash-Hazard",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-712",
@@ -182,9 +266,16 @@
       "incidents": "Goal Zero has received four reports of the power stations catching fire, overheating and smoking. No injuries have been reported.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Goal-Zero-Recalls-YETI-3000X-Power-Stations-Due-to-Serious-Risk-of-Injury-from-Fire-and-Burn-Hazards",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-713",
@@ -195,9 +286,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/JINHEZO-Mini-Waterproof-LED-Tea-Lights-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Consumer-Products-with-Button-Cell-Batteries-Imported-by-Mystic-ZO",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-714",
@@ -208,9 +306,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Koorlian-Mattresses-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Fire-Hazard-Violate-Mandatory-Standard-for-Mattress-Flammability-Sold-on-Amazon-by-Dream-Bedding-Technology",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-711",
@@ -221,9 +326,16 @@
       "incidents": "Modine has received 11 reports of incidents that resulted in fires, totaling at least $2.7 million in property damage. No injuries have been reported.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Modine-Manufacturing-Company-Recalls-Airedale-Heating-and-Cooling-Ventilation-Fans-Due-to-Fire-Hazard",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-715",
@@ -234,9 +346,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Workbless-Pressure-Washers-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Shock-and-Electrocution-Hazards",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-687",
@@ -247,7 +366,7 @@
       "incidents": "Southern Telecom has received two reports of flame jetting and flames escaping from the concrete container, resulting in two injuries including second-degree and third-degree burns.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Southern-Telecom-Recalls-Brookstone-Branded-Tabletop-Fire-Pits-Due-to-Risk-of-Serious-Burn-Injury-or-Death-from-Flame-Jetting-and-Fire-Hazards",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": {
         "date": "January 19, 2026",
         "publisher": "AboutLawsuits.com",
@@ -277,7 +396,14 @@
           "articleType": "Recall-announcement coverage",
           "exclusionReason": "Excluded from timing and the 30-day harm feed: this article reports the CPSC recall announcement and was published on or after the agency action."
         }
-      ]
+      ],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-692",
@@ -288,9 +414,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/COMMOWNER-Pressure-Washers-Recalled-Due-to-Serious-Risk-of-Injury-or-Death-from-Shock-and-Electrocution-Hazards-Imported-by-AZ-Home-Concept",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-685",
@@ -300,8 +433,8 @@
       "hazard": "The recalled minifridges’ electrical switch can short circuit, posing fire and burn hazards.",
       "incidents": "Cooluli has received at least 19 reports of the minifridges smoking, sparking, burning, melting, overheating or catching fire, resulting in property damages totaling more than $80,000. One consumer reported a smoke inhalation injury.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Cooluli-Recalls-10-Liter-and-15-Liter-Minifridges-Due-to-Fire-and-Burn-Hazards",
-      "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportDate": "October 2, 2025",
+      "reportBoundary": "The report identifies a Cooluli INFINITY-15L and describes inadequate cooling; it does not allege the recalled fire mechanism. SaferProducts report 20251002-2E2BC-2147327375 was submitted October 2, 2025 and published November 26, 2025. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
       "excludedCoverage": [
         {
@@ -314,7 +447,14 @@
           "articleType": "Recall-announcement coverage",
           "exclusionReason": "Excluded from timing and the 30-day harm feed: this article reports the CPSC recall announcement and was published on or after the agency action."
         }
-      ]
+      ],
+      "reportPublicationDate": "November 26, 2025",
+      "reportNumber": "20251002-2E2BC-2147327375",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=5624977&handler=Detail",
+      "reportSeverity": "No Incident, No Injury",
+      "reportSummary": "The report identifies a Cooluli INFINITY-15L and describes inadequate cooling; it does not allege the recalled fire mechanism.",
+      "reportMatch": "exact_product",
+      "reportTiming": "pre_recall"
     },
     {
       "id": "26-698",
@@ -325,9 +465,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/CuberShop-Magnetic-Speed-Cubes-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Magnet-Ingestion-Violate-Mandatory-Standard-for-Toys-Imported-by-SKY-CUBE-HK",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-691",
@@ -338,9 +485,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Deli-Jerry-Fuel-Containers-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Burn-Hazard-and-Child-Poisoning-Violate-Mandatory-Standard-for-Portable-Fuel-Containers-Sold-on-Walmart-com-by-Deli-OfficeSupplies",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-690",
@@ -351,9 +505,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/DUMOS-Nine-Drawer-Dressers-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Tip-Over-and-Entrapment-Hazards-Violate-Mandatory-Standard-for-Clothing-Storage-Units",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-688",
@@ -363,8 +524,8 @@
       "hazard": "The baby jumper, baby swing and 2-in-1 baby jumper & swing can become unstable, posing fall and impact hazards. Additionally, the hanging restraint straps and seat openings can pose strangulation hazards.",
       "incidents": "Taleco Gear has received at least 52 reports of fall, impact and strangulation hazards, including at least 32 reports of injuries such as head bumps and a bloody nose.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Taleco-Gear-Recalls-Baby-Jumpers-Baby-Swings-and-2-in-1-Baby-Jumper-and-Swings-Due-to-Risk-of-Serious-Injury-or-Death-from-Fall-and-Strangulation-Hazards",
-      "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportDate": "May 31, 2025",
+      "reportBoundary": "The report names a G TALECO GEAR baby jumper and states that the product broke and the child fell. SaferProducts report 20250531-85AA3-2147330935 was submitted May 31, 2025 and published June 18, 2025. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
       "excludedCoverage": [
         {
@@ -377,7 +538,14 @@
           "articleType": "Recall-announcement coverage",
           "exclusionReason": "Excluded from timing and the 30-day harm feed: this article reports the CPSC recall announcement and was published on or after the agency action."
         }
-      ]
+      ],
+      "reportPublicationDate": "June 18, 2025",
+      "reportNumber": "20250531-85AA3-2147330935",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=5322421&handler=Detail",
+      "reportSeverity": "Incident, No Injury",
+      "reportSummary": "The report names a G TALECO GEAR baby jumper and states that the product broke and the child fell.",
+      "reportMatch": "exact_product",
+      "reportTiming": "pre_recall"
     },
     {
       "id": "26-686",
@@ -387,8 +555,8 @@
       "hazard": "The recalled magnetic building cubes contain magnets that can become loose if the cubes break or open, posing a magnet ingestion hazard to children. When high-powered magnets are swallowed, the ingested magnets can attract each other, or other metal objects, and become lodged in the digestive system. This can result in perforations, twisting, and/or blockage of the intestines, blood poisoning and death.",
       "incidents": "Yi Suen Commerce is aware of two children who have ingested magnets from the cubes and required surgery to remove the magnets. Yi Suen Commerce is also aware of least 27 reports of the cubes breaking or opening, causing the magnets to become loose and accessible to children.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Goody-King-Magnetic-Building-Cubes-and-Blocks-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Magnetic-Ingestion-Hazard-Imported-by-Yi-Suen-Commerce",
-      "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportDate": "May 30, 2025",
+      "reportBoundary": "The report identifies Goody King magnetic building blocks and states that a child ingested released magnets and required surgery. SaferProducts report 20250530-A9B41-2147330981 was submitted May 30, 2025 and published June 18, 2025. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
       "excludedCoverage": [
         {
@@ -401,7 +569,14 @@
           "articleType": "Recall-announcement coverage",
           "exclusionReason": "Excluded from timing and the 30-day harm feed: this article reports the CPSC recall announcement and was published on or after the agency action."
         }
-      ]
+      ],
+      "reportPublicationDate": "June 18, 2025",
+      "reportNumber": "20250530-A9B41-2147330981",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=5312236&handler=Detail",
+      "reportSeverity": "Injury, Hospital Admission",
+      "reportSummary": "The report identifies Goody King magnetic building blocks and states that a child ingested released magnets and required surgery.",
+      "reportMatch": "exact_product",
+      "reportTiming": "pre_recall"
     },
     {
       "id": "26-702",
@@ -412,9 +587,16 @@
       "incidents": "Youngo has received 11 reports of incidents involving the fan blades breaking or separating from the fan motor flywheel. No injuries have been reported.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Hampton-Bay-Halwin-52-Inch-Ceiling-Fans-Recalled-Due-to-Impact-and-Injury-Hazards-Manufactured-by-Youngo-Limited",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-694",
@@ -424,8 +606,8 @@
       "hazard": "During assembly or disassembly, the frame of the wall bed can fall onto consumers, posing deadly impact, crush and laceration hazards.",
       "incidents": "The firm has received two reports of the Murphy beds falling during assembly, when the Murphy beds were not anchored to the wall, resulting in two injured consumers. One consumer sustained bruising to his head, neck and right shoulder and one consumer sustained a hit to his head, and scrapes and bruises on his arms.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/GigaCloud-Technology-USA-Recalls-Merax-Murphy-Beds-Due-to-Risk-of-Serious-Injury-or-Death-from-Impact-and-Crush-Hazards",
-      "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportDate": "August 14, 2025",
+      "reportBoundary": "The report names a Merax full-size Murphy bed and states that the frame pulled from the wall and fell during opening. SaferProducts report 20250814-01833-2147328664 was submitted August 14, 2025 and published September 3, 2025. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
       "excludedCoverage": [
         {
@@ -438,7 +620,14 @@
           "articleType": "Recall-announcement coverage",
           "exclusionReason": "Excluded from timing and the 30-day harm feed: this article reports the CPSC recall announcement and was published on or after the agency action."
         }
-      ]
+      ],
+      "reportPublicationDate": "September 3, 2025",
+      "reportNumber": "20250814-01833-2147328664",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=5478844&handler=Detail",
+      "reportSeverity": "Injury, First Aid Received by Non-Medical Professional",
+      "reportSummary": "The report names a Merax full-size Murphy bed and states that the frame pulled from the wall and fell during opening.",
+      "reportMatch": "exact_product",
+      "reportTiming": "pre_recall"
     },
     {
       "id": "26-695",
@@ -449,9 +638,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Mattresses-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Fire-Hazard-Violate-Mandatory-Standard-for-Mattress-Flammability-Sold-on-Amazon-by-Qabefy",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-696",
@@ -462,9 +658,16 @@
       "incidents": "The firm has received one report of the alloy insert in the crown hole coming loose. No injuries have been reported.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Ritchey-Design-Recalls-Carbon-Bicycle-Forks-Due-to-Risk-of-Serious-Injury-or-Death-from-Fall-and-Crash-Hazards",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-697",
@@ -475,9 +678,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Shengsen-Prank-Sound-Makers-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Consumer-Products-with-Coin-Batteries-Imported-by-Shengsen-Toys",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-699",
@@ -488,9 +698,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/SUGIFT-Recalls-SUGIFT-Pressure-Washers-Due-to-Serious-Risk-of-Injury-or-Death-from-Shock-and-Electrocution-Hazards",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-701",
@@ -501,9 +718,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Sunnyside-Corporation-Recalls-1-K-Kerosene-Heater-and-Appliance-Fuel-Containers-Due-to-Risk-of-Serious-Injury-or-Death-from-Flash-Fire-and-Burn-Hazard-Violates-Mandatory-Standards-for-Portable-Fuel-Containers",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-689",
@@ -514,9 +738,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/TooyBing-Wooden-Bead-Stacking-Toys-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Choking-Violate-Small-Parts-Ban",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-693",
@@ -527,9 +758,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Yamazuki-Recalls-Youth-All-Terrain-Vehicles-ATVs-Due-to-Risk-of-Serious-Injury-or-Death-from-Crash-Hazard-Violates-Mandatory-Standard-for-ATVs",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-700",
@@ -540,9 +778,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Fastbuy-Recalls-Zimtown-Portable-Gas-and-Fuel-Cans-Due-to-Risk-of-Serious-Injury-or-Death-from-Burn-Hazard-and-Child-Poisoning-Violate-Mandatory-Standard-for-Portable-Fuel-Containers",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-677",
@@ -553,9 +798,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Head-Watersports-Recalls-Apeks-Second-Stage-Scuba-Regulators-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Drowning-Hazard",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-664",
@@ -566,9 +818,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Magnetic-Fidget-Sliders-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Magnet-Ingestion-Violate-Mandatory-Standard-for-Toys-Sold-on-Amazon-by-BUSOHA",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-675",
@@ -579,9 +838,16 @@
       "incidents": "The firm has received three reports of splices failing. No injuries have been reported.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Wichard-Groupe-North-America-Recalls-Courant-Spliced-Kalimba-Climbing-Ropes-Due-to-Risk-of-Serious-Injury-or-Death-from-Fall-Hazard",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-648",
@@ -592,9 +858,16 @@
       "incidents": "The manufacturer reported 19 incidents involving the mower blades staying engaged or not stopping after release of the blade control. No injuries have been reported.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/DR-Power-Equipment-Recalls-Lawn-Mowers-Due-to-Risk-of-Serious-Injury-or-Death-from-Laceration-Hazard-Violate-Mandatory-Standard-for-Lawn-Mowers",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-662",
@@ -605,9 +878,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/OKK-Trading-Recalls-Easter-LED-Headbands-Due-to-Risk-of-Serious-Injury-or-Death-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Toys",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-670",
@@ -618,9 +898,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/A2batt-Recalls-EEMB-Lithium-Coin-Battery-Chargers-Due-to-Risk-of-Serious-Injury-or-Death-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Consumer-Products-with-Coin-Batteries",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-673",
@@ -631,9 +918,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/KC-Imports-and-Exports-Recalls-Mini-Laser-Pointer-Keychains-Due-to-Risk-of-Serious-Injury-or-Death-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Consumer-Products-with-Button-Cell-Batteries",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-676",
@@ -644,9 +938,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Fitueyes-Recalls-Laziza-Dressers-Due-to-Risk-of-Serious-Injury-or-Death-from-Tip-Over-and-Entrapment-Hazards-Violate-Mandatory-Standard-for-Clothing-Storage-Units",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-671",
@@ -656,10 +957,17 @@
       "hazard": "The recalled teething toys violate the mandatory standard for toys because the silicone strings are smaller and longer than permitted. The strings can reach the back of children’s throat and become lodged, posing a serious risk of respiratory distress and a deadly choking hazard.",
       "incidents": "The firm is aware of one report of the toy’s strings reaching the back of a child’s throat, resulting in respiratory distress or choking.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Little-Rawr-Pull-String-Teething-Toys-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Choking-Violate-Mandatory-Standard-for-Toys-Sold-on-Amazon-by-Okabesini-us",
-      "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportDate": "January 28, 2026",
+      "reportBoundary": "The report identifies a Little Rawr pull-string teething toy and states that a string lodged in an infant’s throat before being removed. SaferProducts report 20260128-65B4C-2147324112 was submitted January 28, 2026 and published February 18, 2026. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": "February 18, 2026",
+      "reportNumber": "20260128-65B4C-2147324112",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=5867763&handler=Detail",
+      "reportSeverity": "Incident, No Injury",
+      "reportSummary": "The report identifies a Little Rawr pull-string teething toy and states that a string lodged in an infant’s throat before being removed.",
+      "reportMatch": "exact_product",
+      "reportTiming": "pre_recall"
     },
     {
       "id": "26-668",
@@ -670,9 +978,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Liuqibax-Adult-Bed-Rails-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-and-Asphyxiation-Violate-Mandatory-Standard-for-Adult-Portable-Bed-Rails-Sold-on-Amazon-by-Luqiba",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-661",
@@ -682,8 +997,8 @@
       "hazard": "The bolts on the attic stairway ladders can break while in use, posing a risk of serious injury or death from fall hazard.",
       "incidents": "The firm has received 11 reports of a bolt breaking, including one report of an injury to the neck, head and back.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Louisville-Ladder-Recalls-Over-One-Million-Attic-Stairway-Ladders-Due-to-Risk-of-Serious-Injury-or-Death-from-Fall-Hazard",
-      "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportDate": "August 10, 2026",
+      "reportBoundary": "The report identifies Louisville attic-ladder model AL2240MG-FT and states that a mounting bolt was sliced; it was submitted and published after the recall. SaferProducts report 20260810-708FF-2147312614 was submitted August 10, 2026 and published August 27, 2026. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
       "excludedCoverage": [
         {
@@ -696,7 +1011,14 @@
           "articleType": "Recall-announcement coverage",
           "exclusionReason": "Excluded from timing and the 30-day harm feed: this article reports the CPSC recall announcement and was published on or after the agency action."
         }
-      ]
+      ],
+      "reportPublicationDate": "August 27, 2026",
+      "reportNumber": "20260810-708FF-2147312614",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=6188383&handler=Detail",
+      "reportSeverity": "No Incident, No Injury",
+      "reportSummary": "The report identifies Louisville attic-ladder model AL2240MG-FT and states that a mounting bolt was sliced; it was submitted and published after the recall.",
+      "reportMatch": "exact_product",
+      "reportTiming": "post_recall"
     },
     {
       "id": "26-667",
@@ -706,10 +1028,17 @@
       "hazard": "The magnetic fidget sliders violate the mandatory standard for toys because they can liberate loose high-powered magnets posing an ingestion hazard to children. When high-powered magnets are swallowed, the ingested magnets can attract each other or other metal objects and become lodged in the digestive system. This can result in perforations, twisting, and/or blockage of the intestines, blood poisoning and death.",
       "incidents": "CPSC and the firm are aware of a report involving a child who removed the silicone casing, accessed the two small magnets inside the slider and ingested them. The child was hospitalized.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Magnetic-Fidget-Sliders-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Magnet-Ingestion-Violate-Mandatory-Standard-for-Toys-Sold-on-Amazon-by-PIXLABBY",
-      "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportDate": "March 12, 2026",
+      "reportBoundary": "The report identifies PIXLABBY part PIX003 and states that a child accessed and swallowed magnets, requiring hospital treatment. SaferProducts report 20260312-FC9B0-2147322727 was submitted March 12, 2026 and published March 31, 2026. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": "March 31, 2026",
+      "reportNumber": "20260312-FC9B0-2147322727",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=5939206&handler=Detail",
+      "reportSeverity": "Injury, Hospital Admission",
+      "reportSummary": "The report identifies PIXLABBY part PIX003 and states that a child accessed and swallowed magnets, requiring hospital treatment.",
+      "reportMatch": "exact_product",
+      "reportTiming": "pre_recall"
     },
     {
       "id": "26-672",
@@ -720,9 +1049,16 @@
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Syera-Projecting-Finger-Light-Toys-Recalled-Due-to-Risk-of-Serious-Injury-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Toys-Sold-on-TEMU-by-Senyu",
       "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice says none reported.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-674",
@@ -733,9 +1069,16 @@
       "incidents": "The firm has received one report of a vehicle unexpectedly accelerating. No injuries have been reported.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Vanderhall-North-America-Recalls-Brawley-GTS-Electric-Recreational-Off-Highway-Vehicles-ROVs-Due-to-Risk-of-Serious-Injury-or-Death-from-Crash-Hazard",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-669",
@@ -746,9 +1089,16 @@
       "incidents": "CPSC has received one report of inadequate mattress fit. No injuries have been reported.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Play-Yard-and-Crib-Mattresses-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-and-Fire-Hazards-Violate-Mandatory-Standards-for-Mattresses-Sold-on-Amazon-by-Voomf",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-663",
@@ -759,9 +1109,16 @@
       "incidents": "One report of a tip-over incident with a dresser that resulted in the injury of a 3-year-old child.",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Winston-Porter-and-Seeday-3-Drawer-4-Drawer-and-5-Drawer-Dressers-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Tip-Over-and-Entrapment-Hazards-Violate-Mandatory-Standard-for-Clothing-Storage-Units",
       "reportDate": null,
-      "reportBoundary": "CPSC notice describes report(s) but does not publish their submission dates; SaferProducts public service was unavailable during review.",
+      "reportBoundary": "SaferProducts public database export refreshed August 31, 2026; no exact-product report was located in the bounded brand/model review. The CPSC notice describes incident report(s) but does not publish their submission dates.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": null,
+      "reportNumber": null,
+      "reportUrl": null,
+      "reportSeverity": null,
+      "reportSummary": null,
+      "reportMatch": null,
+      "reportTiming": null
     },
     {
       "id": "26-665",
@@ -771,10 +1128,17 @@
       "hazard": "The recalled infant walkers violate the mandatory standard for infant walkers because they can fit through a standard doorway and fail to stop at the edge of a step, posing a deadly fall hazard. In addition, the infant walkers have leg openings that allow the child to slip down until the child's head can become entrapped, posing a risk of serious injury or death.",
       "incidents": "None reported",
       "officialUrl": "https://www.cpsc.gov/Recalls/2026/Wnttmt-Baby-Walkers-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Fall-and-Entrapment-Hazards-Violate-Mandatory-Standard-for-Infant-Walkers-Sold-on-Amazon-by-WURUI-BABY",
-      "reportDate": null,
-      "reportBoundary": "CPSC recall notice says none reported; no dated public SaferProducts report was established.",
+      "reportDate": "September 9, 2025",
+      "reportBoundary": "The report identifies a baby walker whose listing brand changed to Wnttmt and states that it tipped at a threshold, injuring a child’s forehead. SaferProducts report 20250909-00A0A-2147327942 was submitted September 9, 2025 and published September 29, 2025. Consumer-submitted content is not independently verified and does not qualify as independent news evidence.",
       "preRecallNews": null,
-      "excludedCoverage": []
+      "excludedCoverage": [],
+      "reportPublicationDate": "September 29, 2025",
+      "reportNumber": "20250909-00A0A-2147327942",
+      "reportUrl": "https://www.saferproducts.gov/PublicSearch/Result?id=5552835&handler=Detail",
+      "reportSeverity": "Injury, No First Aid or Medical Attention Received",
+      "reportSummary": "The report identifies a baby walker whose listing brand changed to Wnttmt and states that it tipped at a threshold, injuring a child’s forehead.",
+      "reportMatch": "exact_product",
+      "reportTiming": "pre_recall"
     }
   ],
   "earlyWarnings": [
@@ -872,7 +1236,9 @@
     "noLinkedActionAsOf": "August 30, 2026",
     "recentUnlinkedWindow": "August 17–30, 2026",
     "recentUnlinkedSignalCount": 4,
-    "actionSearchBoundary": "No matching product-specific CPSC Recall or Safety Alert was located in the bounded review through August 30, 2026. Not located is not proof that no action exists."
+    "actionSearchBoundary": "No matching product-specific CPSC Recall or Safety Alert was located in the bounded review through August 30, 2026. Not located is not proof that no action exists.",
+    "saferProductsReview": "Public database export refreshed August 31, 2026. Exact product, brand/model, timing, and incident text were reviewed; looser category or brand-only candidates were excluded.",
+    "saferProductsExactMatchCount": 10
   },
   "evidenceSearchAudit": {
     "reviewed": "August 30, 2026",
@@ -1425,5 +1791,8 @@
       "status": "No linked CPSC action located in review",
       "asOf": "August 30, 2026"
     }
-  ]
+  ],
+  "saferProductsExport": "https://www.saferproducts.gov/SPDB.zip",
+  "saferProductsExportRetrieved": "August 31, 2026",
+  "saferProductsExactMatchCount": 10
 }

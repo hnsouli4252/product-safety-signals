@@ -18,8 +18,31 @@ test('every recall preserves source and boundary fields', () => {
     assert.ok(record.hazard);
     assert.ok(record.incidents);
     assert.ok(record.reportBoundary);
-    assert.equal(record.reportDate, null);
+    assert.ok(Object.hasOwn(record, 'reportDate'));
+    assert.ok(Object.hasOwn(record, 'reportPublicationDate'));
+    assert.ok(Object.hasOwn(record, 'reportNumber'));
+    assert.ok(Object.hasOwn(record, 'reportUrl'));
   }
+});
+
+test('SaferProducts refresh preserves exact-product report provenance', () => {
+  const matches = data.records.filter(record => record.reportMatch === 'exact_product');
+  assert.equal(data.saferProductsExactMatchCount, 10);
+  assert.equal(data.methodology.saferProductsExactMatchCount, 10);
+  assert.equal(matches.length, 10);
+  assert.equal(data.saferProductsExportRetrieved, 'August 31, 2026');
+  assert.match(data.saferProductsExport, /^https:\/\/www\.saferproducts\.gov\/SPDB\.zip$/);
+  for (const record of matches) {
+    assert.ok(!Number.isNaN(new Date(record.reportDate).valueOf()));
+    assert.ok(['pre_recall', 'post_recall'].includes(record.reportTiming));
+    assert.ok(record.reportPublicationDate);
+    assert.match(record.reportNumber, /^20\d{6}-[A-Z0-9]+-\d+$/);
+    assert.match(record.reportUrl, /^https:\/\/www\.saferproducts\.gov\/PublicSearch\/Result\?id=\d+&handler=Detail$/);
+    assert.ok(record.reportSummary);
+    assert.ok(record.reportSeverity);
+  }
+  assert.equal(matches.filter(record => record.reportTiming === 'pre_recall').length, 9);
+  assert.equal(matches.filter(record => record.reportTiming === 'post_recall').length, 1);
 });
 
 test('pre-recall evidence is independent, harm-based, and strictly predates action', () => {
