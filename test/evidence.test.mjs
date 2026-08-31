@@ -80,12 +80,36 @@ test('past-year feed retains qualified U.S. independent harm reporting only', ()
     assert.doesNotMatch(lead.title, /recall alert|recalled/i);
     assert.ok(['Pre-action', 'Post-action', 'No linked action'].includes(lead.timingStatus));
   }
-  assert.equal(data.pastYearIndependentNews.length, 13);
-  assert.equal(data.methodology.pastYearQualifiedNewsCount, 13);
+  assert.equal(data.pastYearIndependentNews.length, 25);
+  assert.equal(data.methodology.pastYearQualifiedNewsCount, 25);
   assert.equal(data.methodology.harmNewsGeography, 'United States incidents only');
-  assert.equal(new Set(data.pastYearIndependentNews.map(lead => lead.category)).size, 8);
+  assert.equal(new Set(data.pastYearIndependentNews.map(lead => lead.category)).size, 15);
+  assert.equal(data.methodology.pastYearCategoryCount, 15);
   assert.ok(data.pastYearIndependentNews.every(lead => lead.boundary && lead.sourceBasis && lead.harm));
   assert.ok(data.pastYearIndependentNews.some(lead => lead.timingStatus === 'Pre-action'));
   assert.ok(data.pastYearIndependentNews.some(lead => lead.timingStatus === 'Post-action'));
   assert.ok(data.pastYearIndependentNews.some(lead => lead.timingStatus === 'No linked action'));
+});
+
+test('no-linked-action highlights are bounded, reviewable, and preserve the recent subset', () => {
+  const noLinked = data.pastYearIndependentNews.filter(lead => lead.timingStatus === 'No linked action');
+  assert.equal(noLinked.length, 16);
+  assert.equal(data.methodology.noLinkedActionCount, 16);
+  assert.equal(data.methodology.noLinkedActionAsOf, 'August 30, 2026');
+  assert.ok(noLinked.every(lead => lead.actionSearchBoundary && lead.analystPriority));
+  assert.ok(noLinked.every(lead => /No matching product-specific CPSC Recall or Safety Alert was located/.test(lead.actionSearchBoundary)));
+
+  assert.equal(data.recentUnlinkedSignals.length, 4);
+  assert.equal(data.methodology.recentUnlinkedSignalCount, 4);
+  const fullFeedUrls = new Set(data.pastYearIndependentNews.map(lead => lead.url));
+  for (const signal of data.recentUnlinkedSignals) {
+    const date = new Date(signal.date);
+    assert.ok(date >= new Date('2026-08-17T00:00:00Z'));
+    assert.ok(date <= new Date('2026-08-30T23:59:59Z'));
+    assert.equal(signal.country, 'United States');
+    assert.equal(signal.timingStatus, 'No linked action');
+    assert.equal(signal.status, 'No linked CPSC action located in review');
+    assert.equal(signal.asOf, 'August 30, 2026');
+    assert.ok(fullFeedUrls.has(signal.url));
+  }
 });
